@@ -32,16 +32,10 @@ jobs:
         
       - name: Build Docs
         run: |
-          mkdir -p $GITHUB_WORKSPACE/build/doc
+          mkdir -p build/doc
           doxygen
-      - name: GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2.5.0
+      - name: Deploy Docs
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          # Build directory to deploy
-          build_dir: $GITHUB_WORKSPACE/build/doc/html
-          # Allow Jekyll to build your site
-          jekyll: false # optional, default is true
-          # If enabled, nothing will be pushed
-          dry_run: true # optional, default is false
-          # Enable verbose output
-          verbose: true # optional, default is false
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/doc
