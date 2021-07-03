@@ -1,0 +1,124 @@
+\hypertarget{lcd_8c}{}\doxysection{src/lcd.c File Reference}
+\label{lcd_8c}\index{src/lcd.c@{src/lcd.c}}
+
+
+L\+C\+D12864显示屏的使用  
+
+
+{\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
+Include dependency graph for lcd.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{lcd_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lcd_8c_aeb0702ba5a7043c823c17624de3af838}{L\+C\+D\+Send\+C\+MD}} (uint8\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em L\+C\+D12864屏幕的指令传输函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{lcd_8c_a410f02e534a63d1f6e7a168dae003d6d}\label{lcd_8c_a410f02e534a63d1f6e7a168dae003d6d}} 
+void \mbox{\hyperlink{lcd_8c_a410f02e534a63d1f6e7a168dae003d6d}{L\+C\+D\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em L\+C\+D12864屏幕的初始化函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_ad9d77fca4dbeef386ccd8989a462b6ed}{Send\+Byte\+L\+CD}} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em L\+C\+D12864屏幕的\+Byte级传输函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_a64274f169153f2264ea0643e85a680fe}{L\+C\+D\+Send\+D\+A\+TA}} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em L\+C\+D12864屏幕的文本传输函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_aa1eca2520db98509ccb6ffd27252b69e}{L\+C\+D\+Set\+Pos}} (uint8\+\_\+t row, uint8\+\_\+t col)
+\begin{DoxyCompactList}\small\item\em L\+C\+D12864屏幕的位置设定位置设定函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_a3e8955da58bef8d34253fac5a7b2434e}{L\+C\+D\+Display\+Str}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em L\+C\+D12864屏幕的字符串显示函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+L\+C\+D12864显示屏的使用 
+
+\begin{DoxyCopyright}{Copyright}
+Copyright(c) 2021 Net\+Sec ~\newline
+All rights reserved.
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+卢玮，李瑞源 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lcd_8c_a3e8955da58bef8d34253fac5a7b2434e}\label{lcd_8c_a3e8955da58bef8d34253fac5a7b2434e}} 
+\index{lcd.c@{lcd.c}!LCDDisplayStr@{LCDDisplayStr}}
+\index{LCDDisplayStr@{LCDDisplayStr}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCDDisplayStr()}{LCDDisplayStr()}}
+{\footnotesize\ttfamily void L\+C\+D\+Display\+Str (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D12864屏幕的字符串显示函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & 需要显示的字符串 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lcd_8c_aeb0702ba5a7043c823c17624de3af838}\label{lcd_8c_aeb0702ba5a7043c823c17624de3af838}} 
+\index{lcd.c@{lcd.c}!LCDSendCMD@{LCDSendCMD}}
+\index{LCDSendCMD@{LCDSendCMD}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCDSendCMD()}{LCDSendCMD()}}
+{\footnotesize\ttfamily void L\+C\+D\+Send\+C\+MD (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D12864屏幕的指令传输函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & 传输的指令，为8位 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lcd_8c_a64274f169153f2264ea0643e85a680fe}\label{lcd_8c_a64274f169153f2264ea0643e85a680fe}} 
+\index{lcd.c@{lcd.c}!LCDSendDATA@{LCDSendDATA}}
+\index{LCDSendDATA@{LCDSendDATA}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCDSendDATA()}{LCDSendDATA()}}
+{\footnotesize\ttfamily void L\+C\+D\+Send\+D\+A\+TA (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D12864屏幕的文本传输函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & 传输的文本数据，为8位 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lcd_8c_aa1eca2520db98509ccb6ffd27252b69e}\label{lcd_8c_aa1eca2520db98509ccb6ffd27252b69e}} 
+\index{lcd.c@{lcd.c}!LCDSetPos@{LCDSetPos}}
+\index{LCDSetPos@{LCDSetPos}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCDSetPos()}{LCDSetPos()}}
+{\footnotesize\ttfamily void L\+C\+D\+Set\+Pos (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{row,  }\item[{uint8\+\_\+t}]{col }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D12864屏幕的位置设定位置设定函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & 游标的行位置（0-\/3） \\
+\hline
+{\em col} & 游标的列位置（0-\/7） \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lcd_8c_ad9d77fca4dbeef386ccd8989a462b6ed}\label{lcd_8c_ad9d77fca4dbeef386ccd8989a462b6ed}} 
+\index{lcd.c@{lcd.c}!SendByteLCD@{SendByteLCD}}
+\index{SendByteLCD@{SendByteLCD}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{SendByteLCD()}{SendByteLCD()}}
+{\footnotesize\ttfamily void Send\+Byte\+L\+CD (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+L\+C\+D12864屏幕的\+Byte级传输函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & 传输的数据，为8位 \\
+\hline
+\end{DoxyParams}

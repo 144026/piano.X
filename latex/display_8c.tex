@@ -1,0 +1,98 @@
+\hypertarget{display_8c}{}\doxysection{src/display.c File Reference}
+\label{display_8c}\index{src/display.c@{src/display.c}}
+
+
+展示模块  
+
+
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
+Include dependency graph for display.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{display_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{display_8c_ae2c5b80a65268def4100ad7a1683b196}\label{display_8c_ae2c5b80a65268def4100ad7a1683b196}} 
+void \mbox{\hyperlink{display_8c_ae2c5b80a65268def4100ad7a1683b196}{Display\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em 展示模块的初始化函数，需要初始化\+L\+C\+D和\+Sound \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{display_8c_a27682ecd774d2c3d73800641959c0dd5}\label{display_8c_a27682ecd774d2c3d73800641959c0dd5}} 
+void \mbox{\hyperlink{display_8c_a27682ecd774d2c3d73800641959c0dd5}{On\+Animation}} (void)
+\begin{DoxyCompactList}\small\item\em 开机动画和开机音频功能 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{display_8c_aac382847c5e7593d0c31a98790c824d5}\label{display_8c_aac382847c5e7593d0c31a98790c824d5}} 
+void \mbox{\hyperlink{display_8c_aac382847c5e7593d0c31a98790c824d5}{Defalut\+Page}} (void)
+\begin{DoxyCompactList}\small\item\em 默认显示界面 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a2a7170844030359d893a073ac158eb07}{Change\+Mode\+Page}} (uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a7dd9b70440049068255a61b28effc0e9}{mode}})
+\begin{DoxyCompactList}\small\item\em 模式切换时的界面更改 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a12785cd416342e69e5bac4556bfd422f}{Change\+Level\+Page}} (uint8\+\_\+t \mbox{\hyperlink{sound_8h_a3ee6a09cc2c6453da8783761925775bd}{sound\+\_\+level}})
+\begin{DoxyCompactList}\small\item\em 音阶切换时的界面更改 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a2cff5da46dbbd03125441c908cb3f82f}{Touching\+Buttom\+Page}} (uint8\+\_\+t rhythm)
+\begin{DoxyCompactList}\small\item\em 按键时的界面更改 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{display_8c_a1b9eea66001117d5c3aa2ac407fc9781}\label{display_8c_a1b9eea66001117d5c3aa2ac407fc9781}} 
+void \mbox{\hyperlink{display_8c_a1b9eea66001117d5c3aa2ac407fc9781}{Touch\+Buttom\+Fini\+Page}} (void)
+\begin{DoxyCompactList}\small\item\em 按键结束时的界面更改 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+展示模块 
+
+\begin{DoxyCopyright}{Copyright}
+Copyright(c) 2021 Net\+Sec ~\newline
+All rights reserved.
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+卢玮 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{display_8c_a12785cd416342e69e5bac4556bfd422f}\label{display_8c_a12785cd416342e69e5bac4556bfd422f}} 
+\index{display.c@{display.c}!ChangeLevelPage@{ChangeLevelPage}}
+\index{ChangeLevelPage@{ChangeLevelPage}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{ChangeLevelPage()}{ChangeLevelPage()}}
+{\footnotesize\ttfamily void Change\+Level\+Page (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{sound\+\_\+level }\end{DoxyParamCaption})}
+
+
+
+音阶切换时的界面更改 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound\+\_\+level} & 切换至的音阶，0为\+Low，1为\+High \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8c_a2a7170844030359d893a073ac158eb07}\label{display_8c_a2a7170844030359d893a073ac158eb07}} 
+\index{display.c@{display.c}!ChangeModePage@{ChangeModePage}}
+\index{ChangeModePage@{ChangeModePage}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{ChangeModePage()}{ChangeModePage()}}
+{\footnotesize\ttfamily void Change\+Mode\+Page (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+模式切换时的界面更改 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & 切换至的工作模式，0为演奏模式，1为教学模式 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8c_a2cff5da46dbbd03125441c908cb3f82f}\label{display_8c_a2cff5da46dbbd03125441c908cb3f82f}} 
+\index{display.c@{display.c}!TouchingButtomPage@{TouchingButtomPage}}
+\index{TouchingButtomPage@{TouchingButtomPage}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{TouchingButtomPage()}{TouchingButtomPage()}}
+{\footnotesize\ttfamily void Touching\+Buttom\+Page (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{rhythm }\end{DoxyParamCaption})}
+
+
+
+按键时的界面更改 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhythm} & 当前按下的按键对应的音频 \\
+\hline
+\end{DoxyParams}

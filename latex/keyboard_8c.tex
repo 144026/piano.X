@@ -1,0 +1,167 @@
+\hypertarget{keyboard_8c}{}\doxysection{src/keyboard.c File Reference}
+\label{keyboard_8c}\index{src/keyboard.c@{src/keyboard.c}}
+
+
+按键模块  
+
+
+{\ttfamily \#include \char`\"{}keyboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
+Include dependency graph for keyboard.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{keyboard_8c_a35318cf1a2dec226a910eb3083292c16}\label{keyboard_8c_a35318cf1a2dec226a910eb3083292c16}} 
+void \mbox{\hyperlink{keyboard_8c_a35318cf1a2dec226a910eb3083292c16}{T\+M\+R1\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em timer1初始化函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{keyboard_8c_a04e7d70591b56ea83a3cda7166220d4f}\label{keyboard_8c_a04e7d70591b56ea83a3cda7166220d4f}} 
+void \mbox{\hyperlink{keyboard_8c_a04e7d70591b56ea83a3cda7166220d4f}{T\+M\+R1\+Func}} (void)
+\begin{DoxyCompactList}\small\item\em 每次timer1中断后执行的函数，负责执行按键的全扫描及后续功能 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{keyboard_8c_ad856d016886ca699c666f4095ef46f4d}\label{keyboard_8c_ad856d016886ca699c666f4095ef46f4d}} 
+void \mbox{\hyperlink{keyboard_8c_ad856d016886ca699c666f4095ef46f4d}{Keyboard\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em 按键模块的初始化函数，需要初始化timer1和各引脚配置 \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a4b497c98f7b20c7b5dcedc8e12a6d1dc}{Scan0}} (void)
+\begin{DoxyCompactList}\small\item\em 按键全扫描的第一部分，负责判断两个功能键的按键情况 \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_af8d1a5a011b20e50fa755deec303dae6}{Scan1}} (void)
+\begin{DoxyCompactList}\small\item\em 按键全扫描的第二部分，负责判断按键4、10、13、15、16的按键情况 \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a12cf195630aa0a2e80e0eeb9d0383e51}{Scan2}} (void)
+\begin{DoxyCompactList}\small\item\em 按键全扫描的第三部分，负责判断按键3、9、12、14的按键情况 \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a520212d8d0bfcd5191af1fb488e87375}{Scan3}} (void)
+\begin{DoxyCompactList}\small\item\em 按键全扫描的第四部分，负责判断按键2、8、11的按键情况 \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a87d03c2a56454e2ff3627abe9fed1cce}{Scan4}} (void)
+\begin{DoxyCompactList}\small\item\em 按键全扫描的第五部分，负责判断按键1、7的按键情况 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{keyboard_8c_a902ea213165bf50176a9376469c1994b}\label{keyboard_8c_a902ea213165bf50176a9376469c1994b}} 
+static uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a902ea213165bf50176a9376469c1994b}{buttom\+\_\+now}} = 0
+\begin{DoxyCompactList}\small\item\em 此次扫描时的按键 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{keyboard_8c_ab37d5c78da105836fa5d36bd9cc9cc0b}\label{keyboard_8c_ab37d5c78da105836fa5d36bd9cc9cc0b}} 
+static uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_ab37d5c78da105836fa5d36bd9cc9cc0b}{buttom\+\_\+last}} = 0
+\begin{DoxyCompactList}\small\item\em 上次扫描时的按键 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{keyboard_8c_a7dd9b70440049068255a61b28effc0e9}\label{keyboard_8c_a7dd9b70440049068255a61b28effc0e9}} 
+static \mbox{\hyperlink{keyboard_8h_a11d32076d0e6a4fbf7ce0273a8ef1902}{work\+\_\+mode\+\_\+t}} \mbox{\hyperlink{keyboard_8c_a7dd9b70440049068255a61b28effc0e9}{mode}} = \mbox{\hyperlink{keyboard_8h_a11d32076d0e6a4fbf7ce0273a8ef1902a7f333a8f14b5817b34708afb007c91b8}{Play}}
+\begin{DoxyCompactList}\small\item\em 当前的工作模式，0为自由弹奏模式，1为教学模式 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+按键模块 
+
+\begin{DoxyCopyright}{Copyright}
+Copyright(c) 2021 Net\+Sec ~\newline
+All rights reserved.
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+卢玮 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{keyboard_8c_a4b497c98f7b20c7b5dcedc8e12a6d1dc}\label{keyboard_8c_a4b497c98f7b20c7b5dcedc8e12a6d1dc}} 
+\index{keyboard.c@{keyboard.c}!Scan0@{Scan0}}
+\index{Scan0@{Scan0}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{Scan0()}{Scan0()}}
+{\footnotesize\ttfamily uint8\+\_\+t Scan0 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+按键全扫描的第一部分，负责判断两个功能键的按键情况 
+
+\begin{DoxyReturn}{Returns}
+指示按键是否按下的flag 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & 有按键 \\
+\hline
+{\em 0} & 没有按键 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{keyboard_8c_af8d1a5a011b20e50fa755deec303dae6}\label{keyboard_8c_af8d1a5a011b20e50fa755deec303dae6}} 
+\index{keyboard.c@{keyboard.c}!Scan1@{Scan1}}
+\index{Scan1@{Scan1}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{Scan1()}{Scan1()}}
+{\footnotesize\ttfamily uint8\+\_\+t Scan1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+按键全扫描的第二部分，负责判断按键4、10、13、15、16的按键情况 
+
+\begin{DoxyReturn}{Returns}
+指示按键是否按下的flag 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & 有按键 \\
+\hline
+{\em 0} & 没有按键 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{keyboard_8c_a12cf195630aa0a2e80e0eeb9d0383e51}\label{keyboard_8c_a12cf195630aa0a2e80e0eeb9d0383e51}} 
+\index{keyboard.c@{keyboard.c}!Scan2@{Scan2}}
+\index{Scan2@{Scan2}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{Scan2()}{Scan2()}}
+{\footnotesize\ttfamily uint8\+\_\+t Scan2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+按键全扫描的第三部分，负责判断按键3、9、12、14的按键情况 
+
+\begin{DoxyReturn}{Returns}
+指示按键是否按下的flag 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & 有按键 \\
+\hline
+{\em 0} & 没有按键 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{keyboard_8c_a520212d8d0bfcd5191af1fb488e87375}\label{keyboard_8c_a520212d8d0bfcd5191af1fb488e87375}} 
+\index{keyboard.c@{keyboard.c}!Scan3@{Scan3}}
+\index{Scan3@{Scan3}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{Scan3()}{Scan3()}}
+{\footnotesize\ttfamily uint8\+\_\+t Scan3 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+按键全扫描的第四部分，负责判断按键2、8、11的按键情况 
+
+\begin{DoxyReturn}{Returns}
+指示按键是否按下的flag 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & 有按键 \\
+\hline
+{\em 0} & 没有按键 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{keyboard_8c_a87d03c2a56454e2ff3627abe9fed1cce}\label{keyboard_8c_a87d03c2a56454e2ff3627abe9fed1cce}} 
+\index{keyboard.c@{keyboard.c}!Scan4@{Scan4}}
+\index{Scan4@{Scan4}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{Scan4()}{Scan4()}}
+{\footnotesize\ttfamily uint8\+\_\+t Scan4 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+按键全扫描的第五部分，负责判断按键1、7的按键情况 
+
+\begin{DoxyReturn}{Returns}
+指示按键是否按下的flag 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & 有按键 \\
+\hline
+{\em 0} & 没有按键 \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,8 @@
+<map id="include/lcd.h" name="include/lcd.h">
+<area shape="rect" id="node1" title="LCD12864显示屏的使用" alt="" coords="157,5,261,32"/>
+<area shape="rect" id="node2" href="$display_8h.html" title="展示模块" alt="" coords="81,80,212,107"/>
+<area shape="rect" id="node6" href="$lcd_8c.html" title="LCD12864显示屏的使用" alt="" coords="236,80,311,107"/>
+<area shape="rect" id="node3" href="$main_8c.html" title=" " alt="" coords="5,155,72,181"/>
+<area shape="rect" id="node4" href="$display_8c.html" title="展示模块" alt="" coords="96,155,197,181"/>
+<area shape="rect" id="node5" href="$keyboard_8c.html" title="按键模块" alt="" coords="222,155,338,181"/>
+</map>

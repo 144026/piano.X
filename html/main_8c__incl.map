@@ -1,0 +1,12 @@
+<map id="main.c" name="main.c">
+<area shape="rect" id="node1" title=" " alt="" coords="132,5,199,32"/>
+<area shape="rect" id="node2" href="$display_8h.html" title="展示模块" alt="" coords="10,80,89,107"/>
+<area shape="rect" id="node7" href="$keyboard_8h.html" title="按键模块" alt="" coords="118,80,213,107"/>
+<area shape="rect" id="node9" href="$sound_8h.html" title="声音模块" alt="" coords="240,80,313,107"/>
+<area shape="rect" id="node3" href="$base_8h.html" title="该项目的最基础设置" alt="" coords="122,229,188,256"/>
+<area shape="rect" id="node6" href="$lcd_8h.html" title="LCD12864显示屏的使用" alt="" coords="23,155,76,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="51,304,158,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="182,304,232,331"/>
+<area shape="rect" id="node8" href="$interrupt_8h.html" title="中断相关函数" alt="" coords="151,155,242,181"/>
+<area shape="rect" id="node10" href="$dac_8h.html" title="TLC5615芯片的使用" alt="" coords="317,155,374,181"/>
+</map>

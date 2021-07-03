@@ -1,0 +1,86 @@
+\hypertarget{dac_8h}{}\doxysection{include/dac.h File Reference}
+\label{dac_8h}\index{include/dac.h@{include/dac.h}}
+
+
+T\+L\+C5615芯片的使用  
+
+
+{\ttfamily \#include \char`\"{}base.\+h\char`\"{}}\newline
+Include dependency graph for dac.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{dac_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dac_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{dac_8h_aa60069b8d525780d72e5735697032b0c}\label{dac_8h_aa60069b8d525780d72e5735697032b0c}} 
+\#define \mbox{\hyperlink{dac_8h_aa60069b8d525780d72e5735697032b0c}{D\+A\+C\+C\+S\+\_\+H}}~L\+A\+T\+Cbits.\+L\+A\+T\+C6 = 1
+\begin{DoxyCompactList}\small\item\em 设置\+D\+A\+C的\+CS({\ttfamily L\+A\+T\+C6})为高电平 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{dac_8h_ae7353442859ed3e6942adca64e617ef4}\label{dac_8h_ae7353442859ed3e6942adca64e617ef4}} 
+\#define \mbox{\hyperlink{dac_8h_ae7353442859ed3e6942adca64e617ef4}{D\+A\+C\+C\+S\+\_\+L}}~L\+A\+T\+Cbits.\+L\+A\+T\+C6 = 0
+\begin{DoxyCompactList}\small\item\em 设置\+D\+A\+C的\+CS({\ttfamily L\+A\+T\+C6})为低电平 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{dac_8h_a5891bed078bcc23861c6b2c3965288f9}\label{dac_8h_a5891bed078bcc23861c6b2c3965288f9}} 
+void \mbox{\hyperlink{dac_8h_a5891bed078bcc23861c6b2c3965288f9}{D\+A\+C\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em T\+L\+C5615 D\+A\+C芯片\+S\+P\+I传输的初始化函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dac_8h_a0cc6775877ffddcd880a32bea48c505e}{Write\+D\+AC}} (uint16\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em T\+L\+C5615 D\+A\+C芯片的数据传输函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+T\+L\+C5615芯片的使用 
+
+\begin{DoxyCopyright}{Copyright}
+Copyright(c) 2021 Net\+Sec ~\newline
+All rights reserved.
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+2021-\/6-\/27 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+卢玮 
+\end{DoxyAuthor}
+\begin{DoxyNote}{Note}
+T\+L\+C5615芯片初始化和通信的封装
+\end{DoxyNote}
+\begin{DoxyDate}{Date}
+2021-\/7-\/3 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+董瑞华 
+\end{DoxyAuthor}
+\begin{DoxyNote}{Note}
+注释变为\+Doxygen风格 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dac_8h_a0cc6775877ffddcd880a32bea48c505e}\label{dac_8h_a0cc6775877ffddcd880a32bea48c505e}} 
+\index{dac.h@{dac.h}!WriteDAC@{WriteDAC}}
+\index{WriteDAC@{WriteDAC}!dac.h@{dac.h}}
+\doxysubsubsection{\texorpdfstring{WriteDAC()}{WriteDAC()}}
+{\footnotesize\ttfamily void Write\+D\+AC (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+T\+L\+C5615 D\+A\+C芯片的数据传输函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & 需要传输的数据，为16位 \\
+\hline
+\end{DoxyParams}
